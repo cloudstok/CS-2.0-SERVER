@@ -38,7 +38,9 @@ const update = async(req ,res)=>{
   const getSubmoduledataData = async(req ,res)=>{
     try{
       let tableName = req.params.s_id
-      let [data] = await read.query(`SELECT * FROM submodules.${tableName} `)  
+      // let [data] = await read.query(`SELECT * FROM submodules.${tableName} `)  
+      let [data] = await read.query(`SELECT * FROM submodules.vishal `)  
+
           res.status(200).send({ status : true , data})
   
     }catch(err){
